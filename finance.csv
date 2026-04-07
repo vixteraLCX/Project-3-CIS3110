@@ -1,0 +1,13 @@
+Date,Department,Revenue,Expenses,Profit,Cost_Type,Region
+2025-01,Sales,120000,80000,40000,Operational,West
+2025-01,Marketing,0,30000,-30000,Advertising,West
+2025-01,Operations,0,45000,-45000,Logistics,West
+2025-02,Sales,135000,85000,50000,Operational,West
+2025-02,Marketing,0,32000,-32000,Advertising,West
+2025-02,Operations,0,47000,-47000,Logistics,West
+2025-03,Sales,150000,90000,60000,Operational,East
+2025-03,Marketing,0,35000,-35000,Advertising,East
+2025-03,Operations,0,48000,-48000,Logistics,East
+2025-04,Sales,170000,95000,75000,Operational,East
+2025-04,Marketing,0,37000,-37000,Advertising,East
+2025-04,Operations,0,50000,-50000,Logistics,East

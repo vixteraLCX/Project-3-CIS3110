@@ -1,0 +1,9 @@
+CustomerID,Name,Region,Segment,JoinDate,LifetimeValue,SatisfactionScore,SupportTickets,ChurnRisk
+C001,John Doe,West,Premium,2023-05-10,15000,9,2,Low
+C002,Jane Smith,East,Standard,2024-01-15,8000,7,5,Medium
+C003,Michael Lee,West,Premium,2022-11-20,20000,10,1,Low
+C004,Sarah Kim,East,Standard,2023-07-18,6000,6,6,High
+C005,David Brown,West,Basic,2024-03-05,3000,5,8,High
+C006,Emily Davis,East,Premium,2022-09-12,22000,9,2,Low
+C007,Chris Wilson,West,Standard,2023-12-01,7000,7,4,Medium
+C008,Anna White,East,Basic,2024-02-10,2500,6,7,High

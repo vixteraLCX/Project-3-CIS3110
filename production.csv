@@ -1,0 +1,9 @@
+ProductionID,Date,ProductID,UnitsProduced,DefectiveUnits,MachineID,Shift,ProductionTimeHours,FactoryLocation
+PR001,2025-01-05,P101,500,20,M01,Day,8,California
+PR002,2025-01-06,P102,600,25,M02,Night,9,Texas
+PR003,2025-02-02,P103,450,15,M01,Day,7,California
+PR004,2025-02-10,P104,700,30,M03,Night,10,Texas
+PR005,2025-03-03,P101,550,18,M02,Day,8,California
+PR006,2025-03-08,P102,650,22,M03,Night,9,Texas
+PR007,2025-04-01,P103,480,12,M01,Day,7,California
+PR008,2025-04-05,P104,720,28,M02,Night,10,Texas

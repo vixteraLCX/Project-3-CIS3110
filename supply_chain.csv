@@ -1,0 +1,9 @@
+SupplierID,SupplierName,ProductID,OrderID,OrderDate,DeliveryDate,LeadTimeDays,CostPerUnit,Quantity,Warehouse,Status
+S001,Supplier A,P101,5001,2025-01-01,2025-01-05,4,900,100,LA,Delivered
+S002,Supplier B,P102,5002,2025-01-03,2025-01-08,5,600,150,Dallas,Delivered
+S003,Supplier C,P103,5003,2025-02-01,2025-02-06,5,350,120,LA,Delivered
+S001,Supplier A,P104,5004,2025-02-05,2025-02-12,7,200,200,Dallas,Delayed
+S002,Supplier B,P101,5005,2025-03-01,2025-03-04,3,900,130,LA,Delivered
+S003,Supplier C,P102,5006,2025-03-07,2025-03-15,8,600,160,Dallas,Delayed
+S001,Supplier A,P103,5007,2025-04-01,2025-04-05,4,350,140,LA,Delivered
+S002,Supplier B,P104,5008,2025-04-03,2025-04-10,7,200,210,Dallas,Delayed
