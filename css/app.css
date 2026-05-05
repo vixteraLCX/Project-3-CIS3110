@@ -1,0 +1,25 @@
+/* ============================================================
+   NexusCorp ERP — Shared Styles
+   css/app.css
+   ============================================================ */
+
+/* Hide AngularJS uncompiled templates before bootstrap */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
+.ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+/* Smooth page-view transitions */
+.ng-enter {
+  animation: fadeIn 0.22s ease-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+
+/* Scrollable main content */
+#main-content {
+  overflow-y: auto;
+  height: 100vh;
+}

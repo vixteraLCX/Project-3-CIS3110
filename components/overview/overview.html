@@ -1,0 +1,119 @@
+<!-- ============================================================
+     Overview Component Template
+     components/overview/overview.html
+     ============================================================ -->
+
+<!-- Page Header -->
+<header class="bg-white/70 backdrop-blur-xl sticky top-0 z-40 shadow-[0_12px_32px_-4px_rgba(17,28,45,0.08)] px-8 py-4 flex items-center justify-between">
+  <div>
+    <div class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">ERP Portal</div>
+    <h1 class="text-xl font-headline font-extrabold text-on-surface">Portal Overview</h1>
+  </div>
+  <div class="flex items-center gap-3">
+    <div class="flex items-center gap-2 bg-surface-container rounded-full px-4 py-2">
+      <span class="material-symbols-outlined text-on-surface-variant" style="font-size:18px">search</span>
+      <input type="text" placeholder="Search…" class="bg-transparent text-sm outline-none w-36 placeholder-on-surface-variant">
+    </div>
+    <button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center hover:bg-surface-container-high transition-colors">
+      <span class="material-symbols-outlined text-on-surface-variant" style="font-size:20px">notifications</span>
+    </button>
+    <button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center hover:bg-surface-container-high transition-colors">
+      <span class="material-symbols-outlined text-on-surface-variant" style="font-size:20px">settings</span>
+    </button>
+    <div class="w-9 h-9 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-sm font-bold">N</div>
+  </div>
+</header>
+
+<div class="p-8 space-y-7">
+
+  <!-- KPI Cards (driven by CSV data via scope) -->
+  <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+    <div ng-repeat="kpi in kpis" class="bg-surface-container-lowest p-5 rounded-2xl relative overflow-hidden group shadow-[0_2px_12px_-2px_rgba(17,28,45,0.06)]">
+      <div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+      <div class="relative z-10">
+        <div class="flex justify-between items-start mb-3">
+          <span class="material-symbols-outlined text-primary bg-primary-fixed p-1.5 rounded-lg text-lg">{{kpi.icon}}</span>
+          <span ng-class="kpi.badgeClass" class="flex items-center text-[10px] font-bold px-1.5 py-0.5 rounded-full">
+            <span class="material-symbols-outlined mr-0.5" style="font-size:12px">{{kpi.trend}}</span>{{kpi.badge}}
+          </span>
+        </div>
+        <div class="text-on-surface-variant text-[10px] font-label uppercase tracking-wider">{{kpi.label}}</div>
+        <div class="text-xl font-extrabold text-on-surface mt-0.5 font-headline">{{kpi.value}}</div>
+        <div class="mt-3 h-1 w-full bg-surface-container rounded-full overflow-hidden">
+          <div ng-class="kpi.barClass" class="h-full rounded-full" ng-style="{width: kpi.barWidth}"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Module Navigator -->
+  <div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
+    <a href="#/finance" class="bg-surface-container-lowest rounded-2xl p-5 flex flex-col items-center gap-3 hover:bg-surface-container transition-colors shadow-[0_2px_12px_-2px_rgba(17,28,45,0.06)] group">
+      <div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center group-hover:bg-primary transition-colors">
+        <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors" style="font-size:24px">account_balance</span>
+      </div>
+      <span class="text-xs font-label font-semibold text-on-surface-variant text-center">Finance &amp; Accounting</span>
+    </a>
+    <a href="#/sales" class="bg-surface-container-lowest rounded-2xl p-5 flex flex-col items-center gap-3 hover:bg-surface-container transition-colors shadow-[0_2px_12px_-2px_rgba(17,28,45,0.06)] group">
+      <div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center group-hover:bg-primary transition-colors">
+        <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors" style="font-size:24px">trending_up</span>
+      </div>
+      <span class="text-xs font-label font-semibold text-on-surface-variant text-center">Sales Management</span>
+    </a>
+    <a href="#/crm" class="bg-surface-container-lowest rounded-2xl p-5 flex flex-col items-center gap-3 hover:bg-surface-container transition-colors shadow-[0_2px_12px_-2px_rgba(17,28,45,0.06)] group">
+      <div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center group-hover:bg-primary transition-colors">
+        <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors" style="font-size:24px">people</span>
+      </div>
+      <span class="text-xs font-label font-semibold text-on-surface-variant text-center">Customer Relations</span>
+    </a>
+    <a href="#/production" class="bg-surface-container-lowest rounded-2xl p-5 flex flex-col items-center gap-3 hover:bg-surface-container transition-colors shadow-[0_2px_12px_-2px_rgba(17,28,45,0.06)] group">
+      <div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center group-hover:bg-primary transition-colors">
+        <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors" style="font-size:24px">precision_manufacturing</span>
+      </div>
+      <span class="text-xs font-label font-semibold text-on-surface-variant text-center">Production</span>
+    </a>
+    <a href="#/supplychain" class="bg-surface-container-lowest rounded-2xl p-5 flex flex-col items-center gap-3 hover:bg-surface-container transition-colors shadow-[0_2px_12px_-2px_rgba(17,28,45,0.06)] group">
+      <div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center group-hover:bg-primary transition-colors">
+        <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors" style="font-size:24px">local_shipping</span>
+      </div>
+      <span class="text-xs font-label font-semibold text-on-surface-variant text-center">Supply Chain</span>
+    </a>
+  </div>
+
+  <!-- Overview Charts Row 1 -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-[0_2px_12px_-2px_rgba(17,28,45,0.06)]">
+      <div class="mb-4">
+        <div class="text-[10px] font-label uppercase tracking-wider text-on-surface-variant">Finance Overview</div>
+        <div class="font-headline font-bold text-on-surface">Monthly Revenue Trend</div>
+      </div>
+      <div class="relative h-64"><canvas id="ov-chart1"></canvas></div>
+    </div>
+    <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-[0_2px_12px_-2px_rgba(17,28,45,0.06)]">
+      <div class="mb-4">
+        <div class="text-[10px] font-label uppercase tracking-wider text-on-surface-variant">Sales Overview</div>
+        <div class="font-headline font-bold text-on-surface">Revenue by Product</div>
+      </div>
+      <div class="relative h-64"><canvas id="ov-chart2"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Overview Charts Row 2 -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-[0_2px_12px_-2px_rgba(17,28,45,0.06)]">
+      <div class="mb-4">
+        <div class="text-[10px] font-label uppercase tracking-wider text-on-surface-variant">CRM Overview</div>
+        <div class="font-headline font-bold text-on-surface">Customer Segments</div>
+      </div>
+      <div class="relative h-64"><canvas id="ov-chart3"></canvas></div>
+    </div>
+    <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-[0_2px_12px_-2px_rgba(17,28,45,0.06)]">
+      <div class="mb-4">
+        <div class="text-[10px] font-label uppercase tracking-wider text-on-surface-variant">Production Overview</div>
+        <div class="font-headline font-bold text-on-surface">Units Produced — Day vs Night</div>
+      </div>
+      <div class="relative h-64"><canvas id="ov-chart4"></canvas></div>
+    </div>
+  </div>
+
+</div>
